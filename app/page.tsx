@@ -73,13 +73,14 @@ export default async function HomePage() {
                   key={event.id}
                   className="bg-black/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8"
                 >
-                  {/* Event Image - 50% taller and using logo image */}
-                  <div className="relative w-full md:w-48 lg:w-56 h-36 md:h-42 lg:h-48 flex-shrink-0 rounded-lg md:rounded-xl overflow-hidden">
+                  {/* Event Image - height fit content */}
+                  <div className="relative w-full md:w-48 lg:w-56 h-auto flex-shrink-0 rounded-lg md:rounded-xl overflow-hidden">
                     <Image
                       src={event.logo_image_url || "/images/90s-event-new-bg.png"}
                       alt={`${event.title} Logo`}
-                      fill
-                      className="object-cover"
+                      width={400}
+                      height={200}
+                      className="object-cover w-full h-auto"
                     />
                   </div>
 

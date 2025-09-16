@@ -86,12 +86,12 @@ export default function EventSignupForm({ event }: { event: Event }) {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-[-20px] z-0">
         <Image
           src={event.background_image_url || "/images/90s-concert-bg.png"}
           alt={`${event.title} Background`}
           fill
-          className="object-cover"
+          className="object-cover blur-[20px] scale-110"
           loading="lazy"
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
